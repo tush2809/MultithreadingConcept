@@ -21,8 +21,10 @@ class ThreadA extends Thread{
                for (int i = 0; i < 100; i++) {
                    tot += i ;
                }
+               System.out.println("Child thread trying to give notification");
+               this.notify();
            }
-            System.out.println("Child thread trying to give notification");
-            this.notify();
+
+
     }
 }
